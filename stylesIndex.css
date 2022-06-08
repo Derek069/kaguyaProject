@@ -3,7 +3,7 @@ html{
 }
 .introduction{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 150px;
     padding-bottom: 102px;
 }
@@ -12,6 +12,7 @@ html{
 }
 .introductionLeft{
     padding: 40px;
+    margin-left: 170px;
 }
 .introductionRight{
     font-size: 14px;
