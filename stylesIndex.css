@@ -1,0 +1,89 @@
+html{
+    font-family: 'Noto Sans JP', sans-serif !important; 
+}
+.introduction{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 150px;
+    padding-bottom: 102px;
+}
+.introductionImg{
+    width: 330px;
+}
+.introductionLeft{
+    padding: 40px;
+}
+.introductionRight{
+    font-size: 14px;
+    margin-right: 117;
+    letter-spacing: 0.145em;
+    line-height: 1.88;
+    padding: 40px;
+}
+h2{
+    font-size: 55px;
+    margin: 0%;
+    margin-bottom: 37px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    
+}
+footer{
+    justify-content: center;
+    background-color: black;
+}
+.footerDiv{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.imageFooter{
+    width: 260px;
+    margin: 30px;
+}
+.footerLeft{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footerRight{
+    padding: 35px;
+    grid-column: 4;
+    text-align: center;
+    align-items: center;
+    color: white;
+    vertical-align: middle;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.footerRight-row1{
+    margin-bottom: 20px;
+}
+ul{
+    margin: auto;
+}
+.share{
+    margin: auto;
+    font-size: 11px;
+    letter-spacing: 0.45em;
+    vertical-align: middle;
+}
+li{
+    display: block;
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+.socialImg{
+    width: 32px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.bottomText{
+    font-size: 11px;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+}
