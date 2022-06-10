@@ -3,8 +3,30 @@ html{
 }
 body{
     overflow-x: hidden;
-
+    -webkit-font-smoothing: antialiased;
 }
+ul{
+    margin: auto;
+}
+li{
+    display: block;
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+h2{
+    font-size: 55px;
+    margin: 0%;
+    margin-bottom: 37px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    
+}
+/* Main Styles */
 .main{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -48,29 +70,92 @@ body{
     width: 120px;
     filter: brightness(0) invert(1) ;
 }
-.onair-1{
+.onair{
     display: block;
     position: absolute;
-    top: 20%;
-    transform: translate(-128%, -1%)
-}
-.onair-2{
-    display: block;
-    position: absolute;
-    transform: translate(2150%, -50%);
+    transform: translate(1853%, -50%);
     top: 65%;
+    width: 70px;
 }
-.onair-3{
+.onair-red{
+    display: block;
     position: absolute;
-    transform: translate(2285%, -50%);
+    top: 1%;
+    transform: translate(-128%, -1%);
+    stroke-width: 2px;
+    stroke: #e7274c;
+    fill: transparent;
+    width: 70px;
+
+}
+.onair-red-2{
+    position: absolute;
+    transform: translate(1950%, -50%);
     top: 65%;
     overflow-x: hidden;
     pointer-events: none;
+    stroke-width: 2px;
+    stroke: #e7274c;
+    fill: transparent;
+    width: 70px;
 }
 .onair-img{
     overflow: hidden;
     width: 140%;
 }
+/* News styles */
+.news-container{
+    display: block;
+    padding: 140px 0 165px;
+    position: relative;
+}
+.news{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.news-table{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+}
+.news-content{
+    display: flex;
+    vertical-align: top;
+}
+.news-text{
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    flex: 1 1 auto;
+    padding-bottom: 80px;
+}
+.news-date{
+    display: flex;
+    flex-wrap: wrap;
+}
+.news-year{
+    writing-mode: vertical-lr;
+    font-size: 21px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    letter-spacing: -.02em;
+    -webkit-text-fill-color: transparent;
+}
+.news-day{
+    writing-mode: vertical-lr;
+    font-size: 40.5px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    letter-spacing: -.2em;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -.02em;
+    font-weight: 700px;
+    line-height: 1px;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+/* Introduction Styles */
 .introduction{
     position: relative;
     display: grid;
@@ -92,14 +177,7 @@ body{
     line-height: 1.88;
     padding: 40px;
 }
-h2{
-    font-size: 55px;
-    margin: 0%;
-    margin-bottom: 37px;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-    
-}
+/* Footer Styles */
 footer{
     justify-content: center;
     background-color: black;
@@ -129,24 +207,11 @@ footer{
 .footerRight-row1{
     margin-bottom: 20px;
 }
-ul{
-    margin: auto;
-}
 .share{
     margin: auto;
     font-size: 11px;
     letter-spacing: 0.45em;
     vertical-align: middle;
-}
-li{
-    display: block;
-    list-style: none;
-    display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
 }
 .socialImg{
     width: 32px;
