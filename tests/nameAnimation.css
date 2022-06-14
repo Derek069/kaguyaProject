@@ -1,0 +1,43 @@
+@keyframes slide{
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1358px, 0, 0);
+    }
+}
+@keyframes slide2{
+    0% {
+        transform: translate3d(-1358px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.background-text-a{
+    background: url(./resources/img/bg_deco-text.png) repeat-x;
+    width: 4074px;
+    height: 10px;
+    animation: slide 30s linear infinite;;
+    
+}
+.background-text-b{
+    background: url(./resources/img/bg_deco-text.png) repeat-x;
+    width: 4074px;
+    height: 10px;
+    animation: slide2 30s linear infinite;
+    margin: 6px;
+}
+
+.c-background-text{
+    overflow: hidden;
+    position: absolute;
+    border: none;
+    padding: none;
+
+}
+.p-background-text{
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+}

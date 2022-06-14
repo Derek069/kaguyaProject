@@ -1,19 +1,25 @@
+/* General Styles */
 html{
+    overflow-x: hidden;
     font-family: 'Noto Sans JP', sans-serif !important; 
+    margin:0;
+    padding:0;
 }
 body{
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    margin:0;
+    padding:0;
 }
 ul{
     margin: auto;
+    padding-inline-start: 0px;
 }
 li{
     display: block;
     list-style: none;
     display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     justify-content: center;
     align-items: center;
     font-size: 11px;
@@ -23,36 +29,76 @@ h2{
     margin: 0%;
     margin-bottom: 37px;
     letter-spacing: 0.05em;
-    font-weight: 700;
-    
+    font-weight: 700;    
+}
+/* Aminations */
+@keyframes slide{
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1358px, 0, 0);
+    }
+}
+@keyframes slide2{
+    0% {
+        transform: translate3d(-1358px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+/* Decorations */
+.background-text-a{
+    background: url(./resources/img/bg_deco-text.png) repeat-x;
+    width: 4074px;
+    height: 10px;
+    animation: slide 30s linear infinite;
+}
+.background-text-b{
+    background: url(./resources/img/bg_deco-text.png) repeat-x;
+    width: 4074px;
+    height: 10px;
+    animation: slide2 30s linear infinite;
+    margin: 6px;
+}
+.c-background-text{
+    overflow: hidden;
+    position: absolute;
+    border: none;
+    padding: none;
+}
+.p-background-text{
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
 }
 /* Main Styles */
 .main{
     padding-top: 20px;
-    padding-bottom: 20px;
     margin-left: 55px;
     margin-right: 55px;
-
 }
 .image-main{
     padding: 120px;
     margin-top: 21px;
-    bottom: 19px;
+    margin-bottom: 19px;
     margin-left: 222px;
     margin-right: 222px;
     -webkit-font-smoothing: antialiased;
+    
 }
 .kaguya{
     max-width: 100%;
     margin-top: -160px;
     margin-bottom: -200px;
     box-shadow: 0px 1px 7px 2px rgb(35 39 39 / 27%);
-
 }
 .bg-main-container{
     overflow: hidden;
 }
-.bg-main :not(.image-main .kaguya, .logo-container, .onair-1, .onair-red, .onair-2, .onair, .onair-3, .onair-red-2, .main-container){
+.bg-main{
+    overflow: visible;
     z-index: -1;
     background-color: #e7274c;
     background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
@@ -109,12 +155,14 @@ h2{
 /* News styles */
 .news-container{
     display: block;
-    padding: 140px 0 165px;
+    padding-left: 115px;
+    padding-right: 115px;
     position: relative;
 }
 .news{
     margin-left: 100px;
     margin-right: 100px;
+    padding: 100px 0 165px;
 }
 .news-table{
     display: flex;
@@ -124,7 +172,10 @@ h2{
 }
 .news-content{
     display: flex;
+    flex: 1 1 auto;
     vertical-align: top;
+    flex: 1 1 auto;
+
 }
 .news-text{
     font-size: 15px;
@@ -135,6 +186,7 @@ h2{
 }
 .news-date{
     display: flex;
+    flex: 1 1 auto;
     flex-wrap: wrap;
 }
 .news-year{
@@ -144,6 +196,9 @@ h2{
     -webkit-text-stroke-color: #000000;
     letter-spacing: -.02em;
     -webkit-text-fill-color: transparent;
+    margin: 0px;
+    margin-right: 10px; 
+
 }
 .news-day{
     writing-mode: vertical-lr;
@@ -157,6 +212,12 @@ h2{
     line-height: 1px;
     margin-right: 20px;
     margin-left: 0px;
+}
+.news-arrow-container{
+    flex: 1 1 auto;
+}
+.news-arrow{
+    width: 74px;
 }
 /* Introduction Styles */
 .introduction{
@@ -184,6 +245,7 @@ h2{
 footer{
     justify-content: center;
     background-color: black;
+    position: absolute;
 }
 .footerDiv{
     display: grid;
