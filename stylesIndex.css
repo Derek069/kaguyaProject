@@ -4,6 +4,7 @@ html{
     font-family: 'Noto Sans JP', sans-serif !important; 
     margin:0;
     padding:0;
+    -webkit-font-smoothing: antialiased;
 }
 body{
     -webkit-font-smoothing: antialiased;
@@ -81,17 +82,16 @@ h2{
 }
 .image-main{
     padding: 120px;
-    margin-top: 21px;
-    margin-bottom: 19px;
+    margin-top: 60px;
+    margin-bottom: 90px;
     margin-left: 222px;
     margin-right: 222px;
-    -webkit-font-smoothing: antialiased;
     
 }
 .kaguya{
     max-width: 100%;
     margin-top: -160px;
-    margin-bottom: -200px;
+    margin-bottom: -160px;
     box-shadow: 0px 1px 7px 2px rgb(35 39 39 / 27%);
 }
 .bg-main-container{
@@ -198,7 +198,6 @@ h2{
     -webkit-text-fill-color: transparent;
     margin: 0px;
     margin-right: 10px; 
-
 }
 .news-day{
     writing-mode: vertical-lr;
@@ -218,6 +217,20 @@ h2{
 }
 .news-arrow{
     width: 74px;
+}
+/* Scrolling Menu Styles */
+.scrolling-menu{
+    display: flex;
+    overflow-x: scroll;
+}
+.c-scrolling-menu{  
+    margin-top: 45px;
+    
+}
+.scroll-img{
+    width: 650px; 
+    height: 360px; 
+    object-fit: cover;
 }
 /* Introduction Styles */
 .introduction{
