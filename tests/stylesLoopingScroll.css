@@ -1,0 +1,40 @@
+body{
+  overflow-x:hidden;
+  color:#FFF;
+  font-family:Helvetica;
+  font-size:200%;
+}
+#page {
+  overflow:hidden;
+  white-space:nowrap;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#CCC;
+  display:flex;
+  flex-wrap:no-wrap;
+}
+.pane {
+  flex:0 0 100vw;
+  height:100vh;
+  display:flex;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color: #45CCFF;
+}
+
+.pane:nth-child(4n+2)  {
+  background-color: #49E83E;
+}
+.pane:nth-child(4n+3)  {
+  background-color: #EDDE05;
+}
+.pane:nth-child(4n+4)  {
+  background-color: #E84B30;
+}
+.pane:last-child {
+  background-color: #45CCFF;
+}

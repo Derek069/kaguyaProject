@@ -1,0 +1,24 @@
+.c-challenge{
+    border: solid black 1px;
+    width: 210px;
+    height: 210px;
+    border-radius: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.challenge{
+    z-index: -1;
+    background-image: linear-gradient(#fff1c1, #1a021a,#fe5f55);
+    border-radius: 100%;
+    width: 210px;
+    height: 210px;
+}
+.mountains{
+    width: 210px;
+    height: 210px;
+    border-radius: 100%;
+    background-image: linear-gradient(#1a021a, #0b414e );
+    clip-path:polygon(0 2in,0 159px,30px 130px,50px 150px,141px 59px,100% 59%,2in 3in);
+    position: absolute;
+}

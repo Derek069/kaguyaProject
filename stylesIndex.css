@@ -225,7 +225,10 @@ h2{
 }
 .c-scrolling-menu{  
     margin-top: 45px;
-    
+    overflow-x: auto;
+}
+.c-scrolling-menu::-webkit-scrollbar{
+    display:none;
 }
 .scroll-img{
     width: 650px; 
