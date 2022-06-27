@@ -1,31 +1,62 @@
-var page = document.getElementById('page');
-var last_pane = page.getElementsByClassName('pane');
-last_pane = last_pane[last_pane.length-1];
-var dummy_x = null;
+let sliderWrap = document.querySelector('.infinite-scroll');
+let slider = document.querySelector('.scroll');
+let clonesWidth;
+let sliderWidth;
+let clones=[];
 
-window.onscroll = function () {
-  // Horizontal Scroll.
-  var y = document.body.getBoundingClientRect().top;
-  page.scrollLeft = -y;
-  
-  // Looping Scroll.
-  var diff = window.scrollY - dummy_x;
-  if (diff > 0) {
-    window.scrollTo(0, diff);
-  }
-  else if (window.scrollY == 0) {
-    window.scrollTo(0, dummy_x);
-  }
-}
-// Adjust the body height if the window resizes.
-window.onresize = resize;
-// Initial resize.
-resize();
+let disableScroll = false;
+let scrollPos;
 
-// Reset window-based vars
-function resize() {
-  var w = page.scrollWidth-window.innerWidth+window.innerHeight;
-  document.body.style.height = w + 'px';
-  
-  dummy_x = last_pane.getBoundingClientRect().left+window.scrollY;
+let items = [...document.querySelectorAll('.scroll-item')];
+console.log(items);
+let images = [...document.querySelectorAll('.scroll-image')];
+console.log(images);
+
+images.forEach((image, idx)=>{
+    image.style.backgroundImage = `url(../resources/img/infiniteScrollImages/${idx+1}.jpg)`
+})
+
+items.forEach(item =>{
+    let clone = item.cloneNode(true);
+    clone.classList.add('clone');
+    slider.appendChild(clone);
+    clones.push(clone);
+})
+console.log(clones)
+
+function getClonesWidth(){
+    let width = 0;
+    clones.forEach(clone =>{
+        width += clone.offsetWidth;
+    })
+    return width;
 }
+
+function getScrollPos(){
+    return window.scrollY;
+}
+
+function scrollUpdate(){
+    scrollPos = getScrollPos();
+    if(clonesWidth + scrollPos >= sliderWidth){
+        window.scrollTo({top:1});
+    }else if(scrollPos <= 0){
+        window.scrollTo({top:sliderWidth-clonesWidth-1})
+    }
+
+    slider.style.transform = `translateX(${-window.scrollY}px)`
+
+    requestAnimationFrame(scrollUpdate);
+}
+
+function onLoad(){
+    calculate();
+    document.body.style.height = `${sliderWidth}px`;
+}
+
+function calculate(){
+    sliderWidth = slider.getBoundingClientRect().width;
+    clonesWidth = getClonesWidth();
+}
+
+onLoad()

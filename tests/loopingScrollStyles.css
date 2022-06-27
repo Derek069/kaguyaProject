@@ -1,0 +1,23 @@
+html{
+    overflow: scroll;
+
+}
+.infinite-scroll{
+    border: 1px solid black;
+    height: 360px; 
+}
+.scroll{
+    position: absolute;
+    display: flex;
+}
+.scroll-item{
+    position: relative;
+    flex: 1;
+}
+.scroll-image{
+    position: relative;
+    width: 650px; 
+    height: 360px; 
+    background-size: cover;
+    background-position: center;
+}
