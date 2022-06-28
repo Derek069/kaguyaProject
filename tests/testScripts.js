@@ -1,4 +1,5 @@
 let sliderWrap = document.querySelector('.infinite-scroll');
+let infiniteScroll = document.querySelector('.infinite-scroll');
 let slider = document.querySelector('.scroll');
 let clonesWidth;
 let sliderWidth;
@@ -52,6 +53,8 @@ function scrollUpdate(){
 function onLoad(){
     calculate();
     document.body.style.height = `${sliderWidth}px`;
+    window.scrollTo({top:1});
+    scrollUpdate();
 }
 
 function calculate(){
